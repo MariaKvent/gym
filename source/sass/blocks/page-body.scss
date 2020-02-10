@@ -1,0 +1,23 @@
+.page-body {
+  overflow-x: hidden;
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  font-display: swap;
+  color: $black-blue;
+  margin: 0;
+  padding: 0;
+
+  background-color: $white;
+}
+
+.scroll-hidden {
+  overflow: hidden;
+}

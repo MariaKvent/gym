@@ -1,0 +1,261 @@
+.page-header {
+  position: relative;
+  width: 100%;
+  background: url("../img/main-bg.jpg") no-repeat center;
+  background-size: cover;
+  background-color: red;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1140px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.page-header__nav {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 30px;
+}
+
+.page-header__logo {
+  @include header(700, 26px, 26px);
+  @include link($white);
+  letter-spacing: 0.02em;
+
+  &:hover {
+    color: $dark-blue;
+  }
+}
+
+.page-header__phone {
+  @include header(700, 26px, 26px);
+  @include link($white);
+  letter-spacing: 0.03em;
+
+  &:hover {
+    color: $dark-blue;
+  }
+}
+
+.page-header__main {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 100px;
+}
+
+.page-header__content {
+  padding-top: 122px;
+  flex-shrink: 1;
+  width: 391px;
+  display: flex;
+  flex-direction: column;
+  margin-right: 64px;
+}
+
+.page-header__text {
+  position: relative;
+  padding-bottom: 70px;
+}
+
+.page-header__text span {
+  @include header(700, 109px, 109px);
+  letter-spacing: 0.03em;
+  box-sizing: content-box;
+  color: $white;
+  display: block;
+  text-align: right;
+
+  &:first-of-type {
+    @include header(400, 49px, 49px);
+  }
+}
+
+.page-header__list {
+  position: absolute;
+  bottom: 70px;
+  text-align: right;
+  padding-left: 0;
+}
+
+.page-header__list li {
+  list-style: none;
+  color: $white;
+}
+
+.page-header__button {
+  @include fonts(700, 12px, 14px);
+  letter-spacing: 0.05em;
+  width: 232px;
+  align-self: flex-end;
+  background-color: transparent;
+  border: 0;
+  outline: 3px solid $white;
+  color: $white;
+  padding: 24px 57px;
+  display: block;
+
+  &:hover {
+    background-color: $white;
+    outline: 3px solid $dark-blue;
+    color: $dark-blue;
+  }
+}
+
+.page-header__img {
+  position: relative;
+  max-width: 100%;
+  height: auto;
+}
+
+.page-header__main_social {
+  width: 40px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding-bottom: 47px;
+  margin-left: auto;
+}
+
+.page-header__main_social a {
+  text-decoration: none;
+  margin-bottom: 14px;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  &:hover path {
+    fill: $dark-blue;
+  }
+}
+
+@media (max-width: $tablet) {
+  .container {
+    @include inner(768px, 45px);
+    margin: 0 auto;
+  }
+
+  .page-header__nav {
+    padding-bottom: 10px;
+  }
+
+  .page-header__logo {
+    @include header(700, 24px, 24px);
+  }
+
+  .page-header__phone {
+    @include header(700, 24px, 24px);
+    letter-spacing: 0.02em;
+  }
+
+  .page-header__main {
+    padding-top: 15px;
+    justify-content: space-between;
+  }
+
+  .page-header__content {
+    flex-grow: 0;
+    width: 324px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 0;
+    margin-right: 29px;
+  }
+
+  .page-header__text {
+    position: relative;
+    padding-top: 56px;
+    padding-bottom: 50px;
+  }
+
+  .page-header__text span {
+    @include header(700, 86px, 86px);
+    letter-spacing: 0.03em;
+
+    &:first-of-type {
+      @include header(400, 34px, 34px);
+    }
+  }
+
+  .page-header__list {
+    bottom: 45px;
+  }
+
+  .page-header__list li {
+    font-size: 14px;
+    line-height: 21px;
+  }
+
+  .page-header__button {
+    @include fonts(700, 12px, 14px);
+    letter-spacing: 0.05em;
+    width: 183px;
+    padding: 24px 33px;
+  }
+
+  .page-header__img {
+    width: 324px;
+  }
+
+  .page-header__main_social {
+    display: none;
+  }
+}
+
+@media (max-width: $mobile) {
+  .page-header {
+    background: url("../img/main-bg.jpg") no-repeat top left;
+  }
+
+  .container {
+    @include inner(767px, 15px);
+    padding-bottom: 17px;
+  }
+
+  .page-header__nav {
+    padding-top: 20px;
+  }
+
+  .page-header__main {
+    @include inner(320px, 0);
+  }
+
+  .page-header__content {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .page-header__text {
+    position: relative;
+    padding-top: 56px;
+    padding-bottom: 50px;
+  }
+
+  .page-header__text span {
+    @include header(700, 78px, 78px);
+
+    &:first-of-type {
+      @include header(400, 28px, 28px);
+    }
+  }
+
+  .page-header__list {
+    bottom: 40px;
+  }
+
+  .page-header__button {
+    @include fonts(700, 12px, 14px);
+    letter-spacing: 0.05em;
+    width: 100%;
+    padding: 24px 33px;
+  }
+
+  .page-header__img {
+    display: none;
+  }
+}

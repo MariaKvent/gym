@@ -21,6 +21,16 @@
 @font-face {
   font-family: "Roboto Condensed";
   font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: local("Roboto Condensed Light"),
+    local("RobotoCondensed-light"),
+    url("../fonts/robotocondensedlight.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Roboto Condensed";
+  font-style: normal;
   font-weight: 400;
   font-display: swap;
   src: local("Roboto Condensed"),

@@ -21,7 +21,6 @@ img {
 .button {
   cursor: pointer;
   text-transform: uppercase;
-  // border-radius: 5px;
   text-align: center;
 }
 
@@ -36,52 +35,4 @@ img {
 //   display: flex;
 //   flex-direction: column;
 //   justify-content: flex-start;
-// }
-//
-// .pic-container {
-//   flex: 0 0 auto;
-//   background: url("../img/bg-main.jpg") no-repeat center;
-//   background-size: cover;
-//   background-color: $gray-black;
-//   width: 100%;
-// }
-//
-// .main-pic-container {
-//   background: $white url("../img/bg-white.png") repeat;
-//   background-size: cover;
-//   background-color: $white;
-//   width: 100%;
-// }
-//
-//
-// @media (max-width: $tablet) {
-//   .pic-container {
-//     background: url("../img/bg-main-tablet.jpg") no-repeat center;
-//     background-size: cover;
-//     background-color: $gray-black;
-//     min-height: 520px;
-//   }
-//
-//   .main-pic-container {
-//     background: $white url("../img/triangle.svg") no-repeat;
-//     background-position: 230px 92px;
-//     background-size: auto;
-//     background-color: $white;
-//   }
-// }
-//
-// @media (max-width: $mobile) {
-//   .pic-container {
-//     background: url("../img/bg-main-mobile.jpg") no-repeat center;
-//     background-size: cover;
-//     background-color: $gray-black;
-//     min-height: 647px;
-//   }
-//
-//   .main-pic-container {
-//     background: $white url("../img/triangle.png") no-repeat;
-//     background-position: 135px 66%;
-//     background-size: auto;
-//     background-color: $white;
-//   }
 // }
