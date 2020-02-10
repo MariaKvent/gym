@@ -1,0 +1,39 @@
+@font-face {
+  font-family: "Bebas Neue";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Bebas Neue"),
+    local("BebasNeue"),
+    url("../fonts/bebasneueregular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Bebas Neue";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local("Bebas Neue Bold"),
+    local("BebasNeue-bold"),
+    url("../fonts/bebasneuebold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Roboto Condensed";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Roboto Condensed"),
+    local("RobotoCondensed"),
+    url("../fonts/robotocondensedregular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Roboto Condensed";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local("Roboto Condensed Bold"),
+    local("RobotoCondensed-bold"),
+    url("../fonts/robotocondensedbold.woff2") format("woff2");
+}
