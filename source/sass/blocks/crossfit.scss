@@ -1,3 +1,240 @@
 .crossfit {
-  min-height: 851px;
+  padding-top: 122px;
+  padding-bottom: 60px;
+}
+
+.crossfit__container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: flex;
+  flex-direction: row;
+}
+
+.crossfit__content {
+  width: 43%;
+  background-color: $orange;
+  color: $white;
+  padding: 87px 78px;
+  box-sizing: border-box;
+}
+
+.crossfit__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 33px;
+}
+
+.crossfit__text p {
+  @include fonts(400, 18px, 150%);
+  margin-block-end: 55px;
+  margin-block-start: 0;
+}
+
+.crossfit__header h2 {
+  @include header(700, 90px, 90px);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-block-end: 0;
+  margin-block-start: 0;
+  width: 60%;
+}
+
+.crossfit__calendar_date {
+  width: 64px;
+  padding-bottom: 15px;
+  position: relative;
+}
+
+.crossfit__calendar_date span {
+  display: block;
+}
+
+.crossfit__calendar_date p {
+  @include fonts(400, 18px, 27px);
+  margin-block-end: 0;
+  margin-block-start: 0;
+  padding-bottom: 7px;
+  border-bottom: 1px solid $white;
+}
+
+.date {
+  display: flex;
+  justify-content: space-between;
+}
+
+.date span {
+  @include fonts(700, 40px, 46px);
+}
+
+.month {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.month span {
+  @include fonts(400, 14px, 21px);
+}
+
+.crossfit__calendar_time {
+  width: 88px;
+  display: flex;
+  flex-direction: column;
+}
+
+.crossfit__calendar_time p {
+  @include fonts(400, 18px, 27px);
+  margin-block-end: 0;
+  margin-block-start: 0;
+  padding-bottom: 7px;
+  border-bottom: 1px solid $white;
+}
+
+.crossfit__calendar_time span {
+  @include fonts(700, 40px, 46px);
+}
+
+.crossfit__button {
+  @include fonts(700, 12px, 14px);
+  @include link($white);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  background-color: transparent;
+  border: 0;
+  outline: 4px solid $white;
+  color: $white;
+  padding: 29px 100px;
+  display: block;
+  text-align: center;
+
+  &:hover {
+    background-color: $white;
+    outline: 3px solid $dark-blue;
+    color: $dark-blue;
+  }
+}
+
+.crossfit__container img {
+  height: 100%;
+}
+
+@media (max-width: $tablet) {
+  .crossfit {
+    padding-top: 100px;
+    padding-bottom: 50px;
+  }
+
+  .crossfit__container {
+    @include inner(768px, 45px);
+    display: flex;
+    flex-direction: row;
+  }
+
+  .crossfit__content {
+    width: 43%;
+    background-color: $orange;
+    color: $white;
+    padding: 45px 45px;
+    box-sizing: border-box;
+  }
+
+  .crossfit__text p {
+    @include fonts(400, 12px, 150%);
+    margin-block-end: 30px;
+    margin-block-start: 0;
+  }
+
+  .crossfit__header {
+    margin-bottom: 5px;
+  }
+
+  .crossfit__header h2 {
+    @include header(700, 52px, 52px);
+    letter-spacing: 0.03em;
+    margin-block-end: 0;
+    margin-block-start: 0;
+    width: 60%;
+  }
+
+  .crossfit__calendar_date {
+    width: 43px;
+    padding-bottom: 5px;
+    position: relative;
+  }
+
+  .crossfit__calendar_date p {
+    @include fonts(400, 12px, 18px);
+    padding-bottom: 0;
+    margin-block-end: 0;
+  }
+
+  .date span {
+    @include fonts(700, 24px, 32px);
+  }
+
+  .month span {
+    @include fonts(400, 10px, 15px);
+  }
+
+  .crossfit__calendar_time {
+    width: 56px;
+  }
+
+  .crossfit__calendar_time p {
+    @include fonts(400, 12px, 18px);
+    padding-bottom: 0;
+    margin-block-end: 0;
+  }
+
+  .crossfit__calendar_time span {
+    @include fonts(700, 24px, 26px);
+  }
+
+  .crossfit__button {
+    @include fonts(700, 10px, 12px);
+    @include link($white);
+    outline: 2px solid $white;
+    padding: 16px 52px;
+  }
+
+  .crossfit__container picture {
+    width: 386px;
+    height: 292px;
+  }
+
+  .crossfit__container img {
+    height: 100%;
+  }
+}
+
+@media (max-width: $mobile) {
+  .crossfit {
+    padding-top: 70px;
+    padding-bottom: 35px;
+  }
+
+  .crossfit__container {
+    @include inner(768px, 15px);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .crossfit__content {
+    width: 290px;
+    background-color: $orange;
+    color: $white;
+    padding: 46px 44px;
+    box-sizing: border-box;
+    min-height: 292px;
+    margin: 0 auto;
+  }
+
+  .crossfit__container picture {
+    width: 290px;
+    height: 292px;
+    margin: 0 auto;
+  }
 }
