@@ -1,0 +1,267 @@
+.adv {
+  width: 100%;
+  background-color: $gray;
+}
+
+.adv__container {
+  margin: 0 auto;
+  max-width: 1140px;
+  padding: 120px 10px;
+}
+
+.adv__container h2 {
+  @include header(700, 49px, 49px);
+  letter-spacing: 0.03em;
+  margin-block-end: 80px;
+  margin-block-start: 0;
+  text-align: center;
+}
+
+.adv__items {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.adv__item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.adv__area {
+  max-width: 345px;
+  padding-bottom: 75px;
+  align-self: flex-start;
+  border-bottom: 2px solid rgba(209,10,66,.2);
+  position: relative;
+}
+
+.adv__comfort {
+  max-width: 351px;
+  align-self: flex-start;
+  position: relative;
+  bottom: 90px;
+  order: 2;
+}
+
+.adv__cars {
+  max-width: 345px;
+  padding-bottom: 75px;
+  align-self: flex-start;
+  border-bottom: 2px solid rgba(209,10,66,.2);
+  position: relative;
+}
+
+.adv__coach {
+  max-width: 345px;
+  align-self: flex-start;
+  position: relative;
+  bottom: 90px;
+  order: 3;
+}
+
+.adv__item {
+  display: flex;
+  justify-content: space-between;
+  width: 35%;
+}
+
+.adv__item span {
+  @include fonts(400, 14px, 150%);
+  display: block;
+  color: #2e35ac;
+}
+
+.adv__item span:first-of-type {
+  @include fonts(700, 71px, 65px);
+  background: linear-gradient(123deg,#ed0233 11%,#003eb7 56%);
+  background-clip: text;
+  color: transparent;
+}
+
+.adv__area-text,
+.adv__comfort-text {
+  width: 187px;
+}
+
+.adv__cars-text,
+.adv__coach-text {
+  width: 238px;
+}
+
+.adv__item h3 {
+  @include fonts(700, 22px, 150%);
+  margin-block-start: 0;
+  margin-block-end: 10px;
+}
+
+.adv__item p {
+  @include fonts(300, 16px, 140%);
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.eq {
+  width: 25%;
+  padding: 63px 34px;
+  background-color: $dark-blue;
+  color: $white;
+  text-align: center;
+}
+
+.eq span {
+  @include fonts(700, 26px, 150%);
+  display: block;
+}
+
+.eq span:first-of-type {
+  @include fonts(700, 74px, 100px);
+}
+
+.eq p {
+  @include fonts(400, 16px, 150%);
+  margin-block-start: 50px;
+  margin-block-end: 0;
+  width: 172px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: $tablet) {
+  .adv__container {
+    @include inner(768px, 45px);
+    padding: 100px 45px;
+  }
+
+  .adv__container h2 {
+    @include header(700, 42px, 42px);
+    margin-block-end: 55px;
+  }
+
+  .adv__items {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .adv__item {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 46%;
+    box-sizing: border-box;
+  }
+
+  .adv__area {
+    padding-bottom: 12px;
+    align-self: flex-start;
+    border-bottom: none;
+    position: relative;
+  }
+
+  .adv__comfort {
+    position: relative;
+    padding-bottom: 50px;
+    bottom: -36px;
+    order: 4;
+  }
+
+  .adv__cars {
+    padding-bottom: 12px;
+    border-bottom: none;
+    position: relative;
+    order: 1;
+  }
+
+  .adv__coach {
+    padding-bottom: 50px;
+    position: relative;
+    bottom: -36px;
+    order: 5;
+  }
+
+  .eq {
+    width: 60%;
+    margin: 0 auto;
+    flex-wrap: nowrap;
+    order: 3;
+    padding: 40px 20px;
+  }
+
+  .adv__item span {
+    @include fonts(400, 14px, 150%);
+    display: block;
+    color: #2e35ac;
+  }
+
+  .eq span {
+    @include fonts(700, 22px, 150%);
+  }
+
+  .eq span:first-of-type {
+    @include fonts(700, 74px, 74px);
+  }
+
+  .eq p {
+    @include fonts(400, 16px, 150%);
+    margin-block-start: 25px;
+  }
+
+  .adv__item span:first-of-type {
+    @include fonts(700, 58px, 58px);
+    background: linear-gradient(123deg,#ed0233 11%,#003eb7 56%);
+    background-clip: text;
+    color: transparent;
+  }
+
+  .adv__item h3 {
+    @include fonts(700, 20px, 150%);
+    margin-block-start: 0;
+    margin-block-end: 10px;
+  }
+
+  .adv__item p {
+    @include fonts(300, 16px, 140%);
+    margin-block-start: 0;
+    margin-block-end: 0;
+  }
+
+  .adv__area-text,
+  .adv__comfort-text {
+    width: 195px;
+  }
+
+  .adv__cars-text,
+  .adv__coach-text {
+    width: 226px;
+  }
+}
+
+@media (max-width: $mobile) {
+  .adv__container {
+    @include inner(768px, 15px);
+    padding: 70px 15px;
+    margin: 0;
+  }
+
+  .adv__container h2 {
+    @include header(700, 32px, 32px);
+    margin-block-end: 55px;
+  }
+
+  .adv__items {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  .adv__item {
+    display: flex;
+    justify-content: justify-content;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 50px;
+    padding-bottom: 0;
+  }
+}
