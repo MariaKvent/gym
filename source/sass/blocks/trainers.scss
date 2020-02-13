@@ -52,6 +52,11 @@
   border: 0;
 }
 
+.trainers__click_left:hover path,
+.trainers__click_right:hover path {
+  stroke: $dark-blue;
+}
+
 .trainers__item {
   position: relative;
   margin: 0 auto;
