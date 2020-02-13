@@ -1,0 +1,250 @@
+.stock {
+  width: 100%;
+}
+
+.stock__container {
+  margin: 0 auto;
+  max-width: 1140px;
+  padding: 120px 10px 60px;
+}
+
+.stock__container h2 {
+  @include header(700, 49px, 49px);
+  letter-spacing: 0.03em;
+  text-align: center;
+  margin-block-start: 0;
+  margin-block-end: 50px;
+}
+
+.stock__content {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.stock__main {
+  display: flex;
+  width: 50%;
+}
+
+.stock__wrapper {
+  width: 49%;
+  padding: 45px 45px;
+  background-color: $orange;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.stock__text span {
+  @include fonts(700, 28px, 32px);
+  display: block;
+  color: $white;
+
+  &:last-of-type {
+    @include fonts(700, 70px, 70px);
+    margin-bottom: 25px;
+  }
+}
+
+.stock__text p {
+  @include fonts(400, 18px, 140%);
+  color: $white;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.stock__main-button {
+  @include link($white);
+  @include fonts(700, 14px, 16px);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-bottom: 1px solid $white;
+  align-self: flex-start;
+
+  &:hover {
+    color: $dark-blue;
+    border-bottom: 1px solid $dark-blue;
+  }
+}
+
+.stock__main img {
+  height: 100%;
+}
+
+.stock__other {
+  width: 47%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.stock__other-item {
+  min-height: 211px;
+  padding: 28px 28px;
+  border: 7px solid transparent;
+  border-image: linear-gradient(170deg, #d10a42, #00359f);
+  border-image-slice: 1;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.stock__other-text h3 {
+  @include fonts(700, 26px, 26px);
+  margin-block-start: 0;
+  margin-block-end: 10px;
+  color: $dark-blue;
+}
+
+.stock__other-text p {
+  @include fonts(400, 16px, 140%);
+  color: $dark-blue;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.stock__other-button {
+  @include link($dark-blue);
+  @include fonts(700, 12px, 14px);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  align-self: flex-start;
+  border-bottom: 1px solid $dark-blue;
+
+  &:hover {
+    color: $orange;
+    border-bottom: 1px solid $orange;
+  }
+}
+
+@media (max-width: $tablet) {
+  .stock__container {
+    @include inner(768px, 45px);
+    padding-top: 100px;
+    padding-bottom: 50px;
+  }
+
+  .stock__container h2 {
+    @include header(700, 42px, 42px);
+    margin-block-start: 0;
+    margin-block-end: 45px;
+  }
+
+  .stock__content {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  .stock__main {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .stock__wrapper {
+    width: 41.5%;
+  }
+
+  .stock__main picture {
+    flex-grow: 1;
+    height: 492px;
+  }
+
+  .stock__main img {
+    width: 100%;
+    height: 492px;
+  }
+
+  .stock__other {
+    width: 100%;
+    flex-direction: row;
+  }
+
+  .stock__other-item {
+    width: 48%;
+  }
+
+  .stock__other-text h3 {
+    margin-block-end: 15px;
+  }
+}
+
+@media (max-width: $mobile) {
+  .stock__container {
+    @include inner(320px, 15px);
+    margin: 0 auto;
+    padding-top: 70px;
+    padding-bottom: 35px;
+  }
+
+  .stock__container h2 {
+    @include header(700, 32px, 32px);
+    margin-block-start: 0;
+    margin-block-end: 47px;
+  }
+
+  .stock__main {
+    width: 100%;
+    margin-bottom: 30px;
+    flex-direction: column;
+  }
+
+  .stock__wrapper {
+    width: 100%;
+    padding: 40px 51px 45px;
+    text-align: center;
+    min-height: 299px;
+  }
+
+  .stock__text span:last-of-type {
+    margin-bottom: 15px;
+  }
+
+  .stock__text p {
+    width: 189px;
+    margin: 0 auto;
+  }
+
+  .stock__main-button {
+    margin: 0 auto;
+  }
+
+  .stock__main picture {
+    flex-grow: 1;
+    height: 299px;
+  }
+
+  .stock__main img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .stock__other {
+    flex-direction: column;
+  }
+
+  .stock__other-item {
+    width: 100%;
+    padding: 40px 42px;
+    margin-bottom: 30px;
+    text-align: center;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  .stock__other-text h3 {
+    margin-block-start: 0;
+    margin-block-end: 10px;
+  }
+
+  .stock__other-button {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
