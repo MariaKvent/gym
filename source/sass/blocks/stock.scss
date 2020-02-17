@@ -4,8 +4,8 @@
 
 .stock__container {
   margin: 0 auto;
-  max-width: 1140px;
-  padding: 120px 10px 60px;
+  max-width: 1160px;
+  padding: 112px 10px 60px;
 }
 
 .stock__container h2 {
@@ -13,7 +13,7 @@
   letter-spacing: 0.03em;
   text-align: center;
   margin-block-start: 0;
-  margin-block-end: 50px;
+  margin-block-end: 58px;
 }
 
 .stock__content {
@@ -28,8 +28,8 @@
 }
 
 .stock__wrapper {
-  width: 49%;
-  padding: 45px 45px;
+  width: 48%;
+  padding: 38px 43px 52px 45px;
   background-color: $orange;
   box-sizing: border-box;
   display: flex;
@@ -44,7 +44,7 @@
 
   &:last-of-type {
     @include fonts(700, 70px, 70px);
-    margin-bottom: 25px;
+    margin-bottom: 20px;
   }
 }
 
@@ -69,12 +69,16 @@
   }
 }
 
+.stock__main picture {
+  height: 462px;
+}
+
 .stock__main img {
   height: 100%;
 }
 
 .stock__other {
-  width: 47%;
+  width: 48.5%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -83,7 +87,7 @@
 
 .stock__other-item {
   min-height: 211px;
-  padding: 28px 28px;
+  padding: 23px 30px 29px;
   border: 7px solid transparent;
   border-image: linear-gradient(170deg, #d10a42, #00359f);
   border-image-slice: 1;
@@ -124,7 +128,7 @@
 @media (max-width: $tablet) {
   .stock__container {
     @include inner(768px, 45px);
-    padding-top: 100px;
+    padding-top: 93px;
     padding-bottom: 50px;
   }
 
@@ -147,16 +151,17 @@
 
   .stock__wrapper {
     width: 41.5%;
+    padding: 38px 43px 45px 45px;
   }
 
   .stock__main picture {
     flex-grow: 1;
-    height: 492px;
+    height: 462px;
   }
 
   .stock__main img {
     width: 100%;
-    height: 492px;
+    height: 100%;
   }
 
   .stock__other {
@@ -166,10 +171,14 @@
 
   .stock__other-item {
     width: 48%;
+
+    &:first-of-type {
+      padding-right: 55px;
+    }
   }
 
   .stock__other-text h3 {
-    margin-block-end: 15px;
+    margin-block-end: 12px;
   }
 }
 
@@ -177,7 +186,7 @@
   .stock__container {
     @include inner(320px, 15px);
     margin: 0 auto;
-    padding-top: 70px;
+    padding-top: 77px;
     padding-bottom: 35px;
   }
 
@@ -229,9 +238,13 @@
 
   .stock__other-item {
     width: 100%;
-    padding: 40px 42px;
+    padding: 35px 42px 40px;
     margin-bottom: 30px;
     text-align: center;
+
+    &:first-of-type {
+      padding-right: 42px;
+    }
 
     &:last-of-type {
       margin-bottom: 0;

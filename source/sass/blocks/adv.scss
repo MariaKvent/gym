@@ -5,15 +5,15 @@
 
 .adv__container {
   margin: 0 auto;
-  max-width: 1140px;
-  padding: 120px 10px;
+  max-width: 1040px;
+  padding: 115px 10px 45px;
 }
 
 .adv__container h2 {
   @include header(700, 49px, 49px);
   letter-spacing: 0.03em;
-  margin-block-end: 80px;
   margin-block-start: 0;
+  margin-block-end: 73px;
   text-align: center;
 }
 
@@ -23,42 +23,50 @@
   flex-wrap: wrap;
 }
 
+.adv__item {
+  display: flex;
+  justify-content: space-between;
+  width: 35%;
+}
+
 .adv__area {
   max-width: 345px;
-  padding-bottom: 75px;
+  padding-bottom: 77px;
   align-self: flex-start;
   border-bottom: 2px solid rgba(209, 10, 66, 0.2);
   position: relative;
+}
+
+.adv__area-number {
+  padding-left: 27px;
 }
 
 .adv__comfort {
   max-width: 351px;
   align-self: flex-start;
   position: relative;
-  bottom: 90px;
+  bottom: 72px;
   order: 2;
 }
 
+.adv__comfort-number {
+  padding-left: 20px;
+}
+
 .adv__cars {
-  max-width: 345px;
-  padding-bottom: 75px;
+  max-width: 340px;
+  padding-bottom: 77px;
   align-self: flex-start;
   border-bottom: 2px solid rgba(209, 10, 66, 0.2);
   position: relative;
 }
 
 .adv__coach {
-  max-width: 345px;
+  max-width: 340px;
   align-self: flex-start;
   position: relative;
-  bottom: 90px;
+  bottom: 72px;
   order: 3;
-}
-
-.adv__item {
-  display: flex;
-  justify-content: space-between;
-  width: 35%;
 }
 
 .adv__item span {
@@ -68,26 +76,29 @@
 }
 
 .adv__item span:first-of-type {
-  @include fonts(700, 71px, 65px);
+  @include fonts(700, 71px, 55px);
   background: linear-gradient(123deg, #ed0233 11%, #003eb7 56%);
   background-clip: text;
   color: transparent;
 }
 
-.adv__area-text,
+.adv__area-text {
+  width: 180px;
+}
+
 .adv__comfort-text {
-  width: 187px;
+  width: 192px;
 }
 
 .adv__cars-text,
 .adv__coach-text {
-  width: 238px;
+  width: 233px;
 }
 
 .adv__item h3 {
-  @include fonts(700, 22px, 150%);
+  @include fonts(700, 22px, 22px);
   margin-block-start: 0;
-  margin-block-end: 10px;
+  margin-block-end: 11px;
 }
 
 .adv__item p {
@@ -97,11 +108,12 @@
 }
 
 .eq {
-  width: 25%;
-  padding: 63px 34px;
+  width: 23%;
+  padding: 50px 34px;
   background-color: $dark-blue;
   color: $white;
   text-align: center;
+  box-sizing: border-box;
 }
 
 .eq span {
@@ -110,13 +122,13 @@
 }
 
 .eq span:first-of-type {
-  @include fonts(700, 74px, 100px);
+  @include fonts(700, 74px, 80px);
 }
 
 .eq p {
   @include fonts(400, 16px, 150%);
-  margin-block-start: 50px;
-  margin-block-end: 0;
+  margin-block-start: 32px;
+  margin-block-end: 7px;
   width: 172px;
   margin-left: auto;
   margin-right: auto;
@@ -125,12 +137,12 @@
 @media (max-width: $tablet) {
   .adv__container {
     @include inner(768px, 45px);
-    padding: 100px 45px;
+    padding: 97px 45px 86px;
   }
 
   .adv__container h2 {
     @include header(700, 42px, 42px);
-    margin-block-end: 55px;
+    margin-block-end: 45px;
   }
 
   .adv__items {
@@ -146,39 +158,49 @@
   }
 
   .adv__area {
-    padding-bottom: 12px;
+    padding-bottom: 42px;
     align-self: flex-start;
     border-bottom: none;
     position: relative;
   }
 
+  .adv__area-number {
+    padding-left: 0;
+  }
+
   .adv__comfort {
     position: relative;
     padding-bottom: 50px;
-    bottom: -36px;
+    bottom: -43px;
     order: 4;
   }
 
+  .adv__comfort-number {
+    padding-left: 0;
+  }
+
   .adv__cars {
-    padding-bottom: 12px;
+    left: -11px;
+    padding-bottom: 42px;
     border-bottom: none;
     position: relative;
     order: 1;
   }
 
   .adv__coach {
+    left: -10px;
     padding-bottom: 50px;
     position: relative;
-    bottom: -36px;
+    bottom: -43px;
     order: 5;
   }
 
   .eq {
-    width: 60%;
+    width: 65%;
     margin: 0 auto;
     flex-wrap: nowrap;
     order: 3;
-    padding: 40px 20px;
+    padding: 30px 20px;
   }
 
   .adv__item span {
@@ -197,7 +219,7 @@
 
   .eq p {
     @include fonts(400, 16px, 150%);
-    margin-block-start: 25px;
+    margin-block-start: 16px;
   }
 
   .adv__item span:first-of-type {
@@ -210,7 +232,7 @@
   .adv__item h3 {
     @include fonts(700, 20px, 150%);
     margin-block-start: 0;
-    margin-block-end: 10px;
+    margin-block-end: 3px;
   }
 
   .adv__item p {
@@ -231,15 +253,19 @@
 }
 
 @media (max-width: $mobile) {
+  .adv {
+    min-height: 1095px;
+  }
+
   .adv__container {
-    @include inner(768px, 15px);
-    padding: 70px 15px;
+    @include inner(768px, 0);
+    padding: 68px 0;
     margin: 0;
   }
 
   .adv__container h2 {
     @include header(700, 32px, 32px);
-    margin-block-end: 55px;
+    margin-block-end: 50px;
   }
 
   .adv__items {
@@ -256,7 +282,43 @@
     width: 100%;
     margin: 0 auto;
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 32px;
     padding-bottom: 0;
+  }
+
+  .adv__area-number {
+    padding-left: 0;
+  }
+
+  .adv__cars {
+    max-width: 340px;
+    padding-bottom: 0;
+    align-self: center;
+    border-bottom: none;
+    position: relative;
+    padding-left: 15px;
+    margin-bottom: 45px;
+  }
+
+  .adv__coach {
+    padding-left: 15px;
+  }
+
+  .eq {
+    width: 100%;
+    padding: 40px 34px 35px;
+    background-color: $dark-blue;
+    color: $white;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  .eq span:first-of-type {
+    @include fonts(700, 74px, 68px);
+  }
+
+  .eq p {
+    @include fonts(400, 16px, 150%);
+    margin-block-start: 8px;
   }
 }

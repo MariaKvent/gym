@@ -1,27 +1,27 @@
 .trainers {
-  padding-top: 60px;
+  padding-top: 55px;
   padding-bottom: 120px;
 }
 
 .trainers__container {
-  max-width: 1270px;
+  max-width: 1290px;
   margin: 0 auto;
   position: relative;
 }
 
 .trainers h2 {
   @include header(700, 49px, 49px);
-  max-width: 1151px;
+  max-width: 1160px;
   letter-spacing: 0.03em;
-  margin-block-end: 62px;
+  margin-block-end: 55px;
   margin-block-start: 0;
-  padding-left: 10px;
+  padding-left: 5px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .trainers__items {
-  max-width: 1170px;
+  max-width: 1200px;
   width: 100%;
   margin: 0 auto;
   display: flex;
@@ -32,18 +32,18 @@
 }
 
 .trainers__click_left {
-  max-width: 1171px;
-  height: 34px;
+  max-width: 1200px;
+  height: 38px;
   position: absolute;
   left: 0;
-  top: 43%;
+  top: 43.5%;
   cursor: pointer;
   background-color: transparent;
   border: 0;
 }
 
 .trainers__click_right {
-  height: 34px;
+  height: 38px;
   position: absolute;
   right: 0;
   top: 43%;
@@ -108,7 +108,7 @@
   @include fonts(400, 16px, 24px);
   margin: 0 0 30px;
   text-align: center;
-  color: $gray;
+  color: #b6bdcc;
   display: none;
 }
 
@@ -137,5 +137,130 @@
     background-image: url("../img/list-marker.svg");
     background-size: 100%;
     background-repeat: no-repeat;
+  }
+}
+
+@media (max-width: $tablet) {
+  .trainers {
+    padding-top: 45px;
+    padding-bottom: 100px;
+  }
+
+  .trainers__container {
+    @include inner(768px, 45px);
+    position: relative;
+  }
+
+  .trainers h2 {
+    @include header(700, 42px, 42px);
+    letter-spacing: 0.03em;
+    margin-block-end: 44px;
+    text-align: center;
+  }
+
+  .trainers__items {
+    max-width: 566px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    cursor: pointer;
+    position: relative;
+    box-sizing: border-box;
+  }
+
+  .trainers__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 268px;
+    box-sizing: content-box;
+    margin: 0;
+  }
+
+  .trainers__about h3 {
+    @include fonts(700, 18px, 27px);
+    width: 100%;
+    position: relative;
+    top: 65.5%;
+    margin: 0 0 209px;
+    text-align: center;
+    color: $white;
+    padding-top: 52px;
+  }
+
+  .trainers__about ul {
+    display: none;
+    width: 170px;
+    list-style: none;
+    margin: 0;
+    padding: 0 0 0 10px;
+  }
+
+  .trainers__item img {
+    width: 100%;
+    height: 294px;
+  }
+
+
+  .trainers__click_left {
+    @include inner(768px, 0);
+    height: 34px;
+    left: 45px;
+  }
+
+  .trainers__click_right {
+    @include inner(768px, 0);
+    height: 34px;
+    right: 45px;
+  }
+}
+
+@media (max-width: $mobile) {
+  .trainers {
+    padding-top: 30px;
+    padding-bottom: 70px;
+  }
+
+  .trainers__container {
+    @include inner(320px, 15px);
+  }
+
+  .trainers h2 {
+    @include header(700, 32px, 32px);
+  }
+
+  .trainers__items {
+    max-width: 566px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    box-sizing: border-box;
+  }
+
+  .trainers__item {
+    width: 226px;
+    height: 274px;
+  }
+
+  .trainers__about h3 {
+    padding-top: 46px;
+  }
+
+  .trainers__click_left {
+    left: 15px;
+  }
+
+  .trainers__click_right {
+    right: 15px;
+  }
+
+  .trainers__click_left svg,
+  .trainers__click_right svg {
+    width: 10px;
+    height: 19px;
   }
 }

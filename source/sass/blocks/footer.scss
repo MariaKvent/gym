@@ -14,14 +14,15 @@
   padding-left: 10px;
   box-sizing: border-box;
   margin-left: auto;
+  border-top: 1px solid transparent;
 }
 
 .footer__free-wrapper {
   position: relative;
-  width: 570px;
+  width: 580px;
   box-sizing: border-box;
   margin-left: auto;
-  padding: 70px 0 70px 0;
+  padding: 65px 0 68px 0;
 }
 
 .footer__free-wrapper h2 {
@@ -53,7 +54,7 @@
   background-color: transparent;
   border: none;
   border-bottom: 1px solid #74819c;
-  padding: 10px 0;
+  padding: 5px 0;
   box-sizing: border-box;
 }
 
@@ -65,7 +66,7 @@
   @include fonts(700, 14px, 16px);
   cursor: pointer;
   letter-spacing: 0.05em;
-  padding: 21px 40px;
+  padding: 15px 40px;
   background-color: transparent;
   box-sizing: border-box;
   border: 3px solid $white;
@@ -82,6 +83,7 @@
 .footer__contacts {
   width: 50%;
   min-height: 337px;
+  border-top: 1px solid $black;
 }
 
 .footer__contacts-wrapper {
@@ -90,14 +92,14 @@
   height: 100%;
   box-sizing: border-box;
   margin-right: auto;
-  padding: 70px 0 70px 120px;
+  padding: 65px 0 64px 125px;
 }
 
 .footer__contacts-wrapper h2 {
   @include header(700, 49px, 49px);
   letter-spacing: 0.03em;
   margin-block-start: 0;
-  margin-block-end: 55px;
+  margin-block-end: 50px;
 }
 
 .footer__contacts-content {
@@ -120,7 +122,7 @@
 }
 
 .footer__contact {
-  margin-bottom: 30px;
+  margin-bottom: 23px;
 
   &:last-of-type {
     margin-bottom: 0;
@@ -165,7 +167,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 0 auto;
-  max-width: 1140px;
+  max-width: 1160px;
   padding: 40px 0;
 }
 
@@ -182,7 +184,6 @@
 
 .footer__pages {
   align-self: center;
-  max-width: 600px;
 }
 
 .footer__pages ul {
@@ -192,6 +193,7 @@
   justify-content: center;
   margin: 0 auto;
   padding: 0;
+  margin-left: 20px;
 }
 
 .footer__pages li {
@@ -213,7 +215,6 @@
 }
 
 .footer__social {
-  width: 166px;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
@@ -245,20 +246,24 @@
     padding-left: 0;
     width: 100%;
     margin: 0 auto;
+    min-height: 324px;
+    border-top: none;
   }
 
   .footer__free-wrapper {
-    @include inner(768px, 45px);
-    padding: 70px 45px;
+    @include inner(768px, 0);
+    padding: 62px 39px;
     margin: 0 auto;
   }
 
   .footer__free-wrapper h2 {
     @include header(700, 42px, 42px);
+    margin-block-end: 40px;
+    width: 560px;
   }
 
   .footer__form {
-    width: 100%;
+    width: 94.3%;
   }
 
   .form__inputs input {
@@ -267,18 +272,19 @@
 
   .footer__contacts {
     width: 100%;
+    border-top: none;
   }
 
   .footer__contacts-wrapper {
-    @include inner(768px, 45px);
+    @include inner(768px, 0);
     margin: 0 auto;
-    padding: 70px 45px;
+    padding: 64px 35px 60px;
     width: 570px;
   }
 
   .footer__contacts-wrapper h2 {
     @include header(700, 42px, 42px);
-    margin-block-end: 48px;
+    margin-block-end: 40px;
   }
 
   .footer__contacts-content {
@@ -289,7 +295,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 58%;
+    width: 53%;
     border-right: 1px solid #74819c;
     box-sizing: border-box;
 
@@ -323,7 +329,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     margin: 0 auto;
-    padding: 48px 45px;
+    padding: 40px 45px;
   }
 
   .footer__logo {
@@ -332,6 +338,10 @@
 
   .footer__pages {
     max-width: 400px;
+  }
+
+  .footer__pages ul {
+    margin-left: 11px;
   }
 
   .footer__pages li {
@@ -352,7 +362,7 @@
 @media (max-width: $mobile) {
   .footer__free-wrapper {
     @include inner(320px, 15px);
-    padding: 70px 15px;
+    padding: 65px 15px 70px;
     margin: 0 auto;
   }
 
@@ -364,16 +374,33 @@
     width: 100%;
   }
 
+  .form__inputs {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 40px;
+  }
+
   .form__inputs input {
     width: 100%;
+    margin-bottom: 30px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
   }
 
   .footer__contact {
-    margin-bottom: 30px;
+    margin-bottom: 18px;
 
     &:last-of-type {
       margin-bottom: 30px;
     }
+  }
+
+  .footer__contacts-wrapper h2 {
+    @include header(700, 32px, 32px);
   }
 
   .footer__contacts-content {
@@ -384,12 +411,14 @@
 
   .footer__contacts-wrapper {
     @include inner(320px, 15px);
+    padding-top: 70px;
     width: 100%;
   }
 
   .footer__contacts-col {
     width: 100%;
     border: 0;
+    margin-bottom: -5px;
 
     &:nth-child(2n) {
       padding-left: 0;
@@ -407,7 +436,7 @@
 
   .footer__links-wrapper {
     @include inner(320px, 15px);
-    padding-top: 50px;
+    padding-top: 48px;
     padding-bottom: 50px;
     flex-direction: column;
     position: relative;
@@ -432,11 +461,11 @@
     justify-content: space-between;
     margin: 0 auto;
     padding: 0;
-    height: 96px;
+    height: 102px;
   }
 
   .footer__pages li:first-of-type {
-    padding-top: 35px;
+    padding-top: 38px;
   }
 
   .footer__pages a {
@@ -446,10 +475,25 @@
   .footer__social {
     width: 100%;
     justify-content: flex-start;
+    align-items: baseline;
   }
 
-  .footer__social svg {
+  .footer__social a {
+    margin-right: 35px;
+  }
+
+  .footer__social_vk svg {
     width: 32px;
     height: 17px;
+  }
+
+  .footer__social_ins svg {
+    width: 27px;
+    height: 27px;
+  }
+
+  .footer__social_fb svg {
+    width: 14px;
+    height: 27px;
   }
 }

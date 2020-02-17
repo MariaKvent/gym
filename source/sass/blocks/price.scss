@@ -5,20 +5,20 @@
   position: relative;
 
   &::after {
-    content: url("../img/pic.png");
+    content: url("../img/pic-desktop.png");
     width: 287px;
     height: 494px;
     position: absolute;
     z-index: 1;
-    bottom: -120px;
+    bottom: -150px;
     right: 0;
   }
 }
 
 .price__container {
   margin: 0 auto;
-  max-width: 1140px;
-  padding: 102px 10px 118px;
+  max-width: 1160px;
+  padding: 114px 10px 118px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -30,7 +30,7 @@
   @include header(700, 49px, 49px);
   letter-spacing: 0.03em;
   margin-block-start: 0;
-  margin-block-end: 50px;
+  margin-block-end: 39px;
 }
 
 .price__period {
@@ -45,6 +45,7 @@
   @include fonts(400, 20px, 150%);
   padding-bottom: 12px;
   color: #848fab;
+  cursor: pointer;
 
   &:hover {
     color: $black-blue;
@@ -62,18 +63,18 @@
 .price__item {
   display: flex;
   flex-direction: column;
-  width: 344px;
-  min-height: 432px;
+  width: 360px;
+  min-height: 360px;
   background-color: $white;
-  padding-top: 60px;
+  padding-top: 53px;
   box-sizing: border-box;
   text-align: center;
   cursor: pointer;
-  padding-bottom: 68px;
+  padding-bottom: 60px;
   border: 8px solid transparent;
 
   &:hover {
-    padding-top: 60px;
+    padding-top: 53px;
     border: 8px solid transparent;
     border-image: linear-gradient(111.72deg, #ed0233 17.6%, #003eb7 95.31%);
     border-image-slice: 1;
@@ -90,13 +91,13 @@
   display: block;
   margin-block-end: 0;
   margin-block-start: 0;
-  margin-bottom: 22px;
+  margin-bottom: 12px;
 }
 
 .price__item span {
   @include fonts(400, 16px, 150%);
   display: block;
-  margin-bottom: 96px;
+  margin-bottom: 65px;
 }
 
 .price__cost {
@@ -107,7 +108,7 @@
   justify-content: space-around;
   min-width: 166px;
   margin: 0 auto;
-  margin-bottom: 40px;
+  margin-bottom: 35px;
   box-sizing: border-box;
   position: relative;
   z-index: 2;
@@ -131,7 +132,7 @@
   @include link($dark-blue);
   letter-spacing: 0.05em;
   text-decoration: none;
-  padding: 27px 44px;
+  padding: 24px 44px;
   outline: 2px solid $dark-blue;
   width: 206px;
   display: block;
@@ -148,8 +149,19 @@
 
 @media (max-width: $tablet) {
   .price {
-    padding-top: 100px;
+    padding-top: 95px;
     padding-bottom: 100px;
+    min-height: 1584px;
+
+    &::after {
+      content: url("../img/pic.png");
+      width: 289px;
+      height: 345px;
+      position: absolute;
+      z-index: 1;
+      bottom: -25px;
+      right: 60px;
+    }
   }
 
   .price__container {
@@ -163,12 +175,12 @@
 
   .price__container h2 {
     @include header(700, 42px, 42px);
-    margin-block-end: 45px;
     margin-block-start: 0;
+    margin-block-end: 35px;
   }
 
   .price__period {
-    width: 40%;
+    width: 49%;
     display: flex;
     justify-content: space-between;
     border-bottom: 2px solid #dedfe2;
@@ -177,7 +189,7 @@
 
   .price__period span {
     @include fonts(400, 18px, 150%);
-    padding-bottom: 20px;
+    padding-bottom: 10px;
   }
 
   .price__items {
@@ -191,18 +203,23 @@
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-    width: 426px;
-    min-height: 432px;
-    padding-top: 60px;
-    padding-bottom: 68px;
-    margin-bottom: 27px;
+    width: 442px;
+    min-height: 426px;
+    padding-top: 54px;
+    padding-bottom: 62px;
+    margin-bottom: 40px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
   }
 }
 
 @media (max-width: $mobile) {
   .price {
-    padding-top: 70px;
+    padding-top: 65px;
     padding-bottom: 70px;
+    min-height: 1352px;
 
     &::after {
       display: none;
@@ -216,7 +233,7 @@
 
   .price__container h2 {
     @include header(700, 32px, 32px);
-    margin-block-end: 35px;
+    margin-block-end: 23px;
     margin-block-start: 0;
   }
 
@@ -225,7 +242,7 @@
     display: flex;
     justify-content: space-between;
     border-bottom: 2px solid #dedfe2;
-    margin-bottom: 35px;
+    margin-bottom: 33px;
   }
 
   .price__period span {
@@ -238,35 +255,32 @@
     flex-direction: column;
     margin: 0 auto;
     width: 290px;
-    min-height: 380px;
-    padding-top: 65px;
-    padding-bottom: 68px;
+    min-height: 384px;
+    padding-top: 43px;
+    padding-bottom: 55px;
     margin-bottom: 27px;
+
+    &:hover {
+      padding-top: 43px;
+    }
   }
 
   .price__item h3 {
     @include fonts(700, 22px, 110.2%);
-    margin-bottom: 20px;
+    margin-bottom: 8px;
   }
 
   .price__item span {
-    margin-bottom: 80px;
+    margin-bottom: 55px;
   }
 
   .price__cost {
     @include fonts(700, 48px, 150%);
+    margin-bottom: 32px;
+  }
 
-    &::before {
-      @include fonts(700, 80px, 90px);
-      position: absolute;
-      content: attr(data-price);
-      display: block;
-      top: -25px;
-      left: -15px;
-      right: -15px;
-      color: #e8e8e8;
-      opacity: 0.5;
-      z-index: -1;
-    }
+  .price__cost svg {
+    width: 24px;
+    height: 33px;
   }
 }
