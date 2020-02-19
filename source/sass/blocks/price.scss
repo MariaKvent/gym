@@ -29,8 +29,8 @@
 .price__container h2 {
   @include header(700, 49px, 49px);
   letter-spacing: 0.03em;
-  margin-block-start: 0;
-  margin-block-end: 39px;
+  margin-top: 0;
+  margin-bottom: 39px;
 }
 
 .price__period {
@@ -41,11 +41,12 @@
   margin-bottom: 39px;
 }
 
-.price__period span {
+.price__period-item {
   @include fonts(400, 20px, 150%);
   padding-bottom: 12px;
   color: #848fab;
   cursor: pointer;
+  border-bottom: 2px solid transparent;
 
   &:hover {
     color: $black-blue;
@@ -54,10 +55,25 @@
   }
 }
 
+.price__period-item_active {
+  color: $black-blue;
+  border-bottom: 2px solid #d10a42;
+  padding-bottom: 10px;
+}
+
 .price__items {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.show {
+  display: flex;
+}
+
+.hide {
+  display: none;
 }
 
 .price__item {
@@ -72,6 +88,8 @@
   cursor: pointer;
   padding-bottom: 60px;
   border: 8px solid transparent;
+  flex-wrap: wrap;
+  margin-top: 10px;
 
   &:hover {
     padding-top: 53px;
@@ -81,16 +99,19 @@
   }
 }
 
+.price__item:last-of-type {
+  margin-bottom: 0;
+}
+
 .price__item p {
-  margin-block-end: 0;
-  margin-block-start: 0;
+  margin-bottom: 0;
+  margin-top: 0;
 }
 
 .price__item h3 {
   @include fonts(700, 26px, 110.2%);
   display: block;
-  margin-block-end: 0;
-  margin-block-start: 0;
+  margin-top: 0;
   margin-bottom: 12px;
 }
 
@@ -175,8 +196,8 @@
 
   .price__container h2 {
     @include header(700, 42px, 42px);
-    margin-block-start: 0;
-    margin-block-end: 35px;
+    margin-top: 0;
+    margin-bottom: 35px;
   }
 
   .price__period {
@@ -197,6 +218,14 @@
     display: flex;
     justify-content: space-between;
     flex-direction: column;
+  }
+
+  .show {
+    display: flex;
+  }
+
+  .hide {
+    display: none;
   }
 
   .price__item {
@@ -227,14 +256,14 @@
   }
 
   .price__container {
-    @include inner(768px, 15px);
+    @include inner(767xpx, 15px);
     margin: 0;
   }
 
   .price__container h2 {
     @include header(700, 32px, 32px);
-    margin-block-end: 23px;
-    margin-block-start: 0;
+    margin-bottom: 23px;
+    margin-top: 0;
   }
 
   .price__period {

@@ -1,14 +1,19 @@
 'use strict';
 
+var trainersPage = document.querySelector('.trainers');
 var trainersSlides = document.querySelectorAll('.trainers__item');
 var trainersPrev = document.querySelector('.trainers__click_left');
 var trainersNext = document.querySelector('.trainers__click_right');
-var trainersPage = document.querySelector('.trainers');
 
-var reviewsSlides = document.querySelectorAll('.feedback__content');
-var reviewsPrev = document.querySelector('.feedback__click_left');
-var reviewsNext = document.querySelector('.feedback__click_right');
-var reviewsPage = document.querySelector('.feedback');
+var feedbackPage = document.querySelector('.feedback');
+var feedbackSlides = document.querySelectorAll('.feedback__content');
+var feedbackPrev = document.querySelector('.feedback__click_left');
+var feedbackNext = document.querySelector('.feedback__click_right');
+
+var pricePage = document.querySelector('.price');
+var tabs = document.querySelectorAll('.price__period-item');
+var tabControls = document.querySelector('.price__period');
+var tabContent = document.querySelectorAll('.price__items');
 
 // слайдер
 var startIndexTrainers;
@@ -20,15 +25,15 @@ var endIndexFeedback;
 
 function optimizationSlider() {
   var maxHeight = 0;
-  if (reviewsSlides) {
-    for (var i = 0; i < reviewsSlides.length; i++) {
-      if (maxHeight < reviewsSlides[i].clientHeight) {
-        maxHeight = reviewsSlides[i].clientHeight;
+  if (feedbackSlides) {
+    for (var i = 0; i < feedbackSlides.length; i++) {
+      if (maxHeight < feedbackSlides[i].clientHeight) {
+        maxHeight = feedbackSlides[i].clientHeight;
       }
     }
 
-    for (var j = 0; j < reviewsSlides.length; j++) {
-      reviewsSlides[j].style.height = maxHeight + 'px';
+    for (var j = 0; j < feedbackSlides.length; j++) {
+      feedbackSlides[j].style.minHeight = maxHeight + 'px';
     }
   }
 }
@@ -71,9 +76,9 @@ function switchSliderTrainers(step, slides) {
 }
 
 function changetrainersSlider() {
-  if (window.screen.width < 768) {
+  if (window.matchMedia('(max-width: 767px)').matches) {
     switchSliderTrainers(1, trainersSlides, trainersPrev, trainersNext);
-  } else if (window.screen.width < 1200) {
+  } else if (window.matchMedia('(max-width: 1199px)').matches) {
     switchSliderTrainers(2, trainersSlides, trainersPrev, trainersNext);
   } else {
     switchSliderTrainers(4, trainersSlides, trainersPrev, trainersNext);
@@ -87,32 +92,32 @@ if (trainersPage) {
   trainersNext.addEventListener('click', trainersNextF);
 }
 
-function switchSliderReviews(step, slides) {
+function switchSliderfeedback(step, slides) {
   startIndexFeedback = 0;
   endIndexFeedback = step;
   showSlide(slides, startIndexFeedback, endIndexFeedback);
 }
 
-function reviewsNextF() {
-  if (reviewsSlides) {
-    if (endIndexFeedback < reviewsSlides.length) {
-      showSlide(reviewsSlides, startIndexFeedback += 1, endIndexFeedback += 1);
+function feedbackNextF() {
+  if (feedbackSlides) {
+    if (endIndexFeedback < feedbackSlides.length) {
+      showSlide(feedbackSlides, startIndexFeedback += 1, endIndexFeedback += 1);
     }
   }
 }
 
-function reviewsPrevF() {
-  if (reviewsSlides) {
+function feedbackPrevF() {
+  if (feedbackSlides) {
     if (startIndexFeedback > 0) {
-      showSlide(reviewsSlides, startIndexFeedback -= 1, endIndexFeedback -= 1);
+      showSlide(feedbackSlides, startIndexFeedback -= 1, endIndexFeedback -= 1);
     }
   }
 }
 
-if (reviewsPage) {
-  switchSliderReviews(1, reviewsSlides, reviewsPrev, reviewsNext);
-  reviewsPrev.addEventListener('click', reviewsPrevF);
-  reviewsNext.addEventListener('click', reviewsNextF);
+if (feedbackPage) {
+  switchSliderfeedback(1, feedbackSlides, feedbackPrev, feedbackNext);
+  feedbackPrev.addEventListener('click', feedbackPrevF);
+  feedbackNext.addEventListener('click', feedbackNextF);
 }
 
 // плавный скролл до якоря
@@ -196,3 +201,41 @@ window.addEventListener('DOMContentLoaded', function () {
     setCallBacks(inputTel);
   }
 });
+
+// переключение абонементов
+function switchTabs() {
+  function hideTabContent(a) {
+    for (var i = a; i < tabContent.length; i++) {
+      tabContent[i].classList.add('hide');
+      tabContent[i].classList.remove('show');
+      tabs[i].classList.remove('price__period-item_active');
+    }
+  }
+
+  hideTabContent(1);
+
+  function showTabContent(b, target) {
+    if (tabContent[b].classList.contains('hide')) {
+      tabContent[b].classList.remove('hide');
+      tabContent[b].classList.add('show');
+      target.classList.add('price__period-item_active');
+    }
+  }
+
+  tabControls.addEventListener('click', function (evt) {
+    var target = evt.target;
+    if (target && target.classList.contains('price__period-item')) {
+      for (var i = 0; i < tabs.length; i++) {
+        if (target === tabs[i]) {
+          hideTabContent(0);
+          showTabContent(i, target);
+          break;
+        }
+      }
+    }
+  });
+}
+
+if (pricePage) {
+  switchTabs();
+}

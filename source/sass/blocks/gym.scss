@@ -20,21 +20,19 @@
 .gym__description h2 {
   @include header(700, 49px, 49px);
   letter-spacing: 0.03em;
-  margin-block-start: 0;
-  margin-block-end: 15px;
+  margin-top: 0;
+  margin-bottom: 15px;
 }
 
 .gym__description h3 {
   @include fonts(400, 18px, 150%);
-  margin-block-end: 0;
-  margin-block-start: 0;
+  margin-top: 0;
   margin-bottom: 35px;
 }
 
 .gym__description p {
   @include fonts(300, 16px, 150%);
-  margin-block-end: 0;
-  margin-block-start: 0;
+  margin-top: 0;
   margin-bottom: 7px;
 
   &:last-of-type {
@@ -69,8 +67,10 @@
   left: 50px;
   font-size: 0;
   background-color: transparent;
-  border: 0;
-  outline: 0;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  outline-offset: 0;
   z-index: 2;
   cursor: pointer;
 
@@ -102,7 +102,7 @@
 
   .gym__description h2 {
     @include header(700, 42px, 42px);
-    margin-block-end: 10px;
+    margin-bottom: 10px;
   }
 
   .gym__description h3 {
@@ -148,7 +148,7 @@
   }
 
   .gym__container {
-    @include inner(768px, 0);
+    @include inner(767px, 0);
     margin: 0;
   }
 

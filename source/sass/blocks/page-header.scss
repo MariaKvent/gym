@@ -57,7 +57,7 @@
 
 .page-header__text {
   position: relative;
-  padding-bottom: 70px;
+  margin-bottom: 80px;
 }
 
 .page-header__text span {
@@ -74,10 +74,9 @@
 }
 
 .page-header__list {
-  position: absolute;
-  bottom: 70px;
-  text-align: right;
+  margin-top: -80px;
   padding-left: 20px;
+  margin-bottom: 0;
 }
 
 .page-header__list li {
@@ -176,7 +175,7 @@
   .page-header__text {
     position: relative;
     padding-top: 50px;
-    padding-bottom: 50px;
+    margin-bottom: 60px;
   }
 
   .page-header__text span {
@@ -190,7 +189,8 @@
 
   .page-header__list {
     padding-left: 0;
-    bottom: 45px;
+    margin-top: -70px;
+    margin-bottom: 0;
   }
 
   .page-header__list li {
@@ -246,7 +246,7 @@
   .page-header__text {
     position: relative;
     padding-top: 62px;
-    padding-bottom: 50px;
+    margin-bottom: 50px;
   }
 
   .page-header__text span {

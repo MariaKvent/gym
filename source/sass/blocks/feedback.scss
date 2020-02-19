@@ -13,8 +13,8 @@
   @include header(700, 49px, 49px);
   max-width: 1140px;
   letter-spacing: 0.03em;
-  margin-block-start: 0;
-  margin-block-end: 55px;
+  margin-top: 0;
+  margin-bottom: 55px;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
@@ -37,35 +37,35 @@
   min-height: 242px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
   background-color: $dark-blue;
   color: $white;
   padding: 57px 62px;
   box-sizing: border-box;
   box-shadow: 0 0 40px rgba(28, 51, 116, 0.2);
-  align-items: center;
 }
 
 .feedback__text {
   max-width: 328px;
+  padding-left: 28px;
 }
 
 .feedback__text h3 {
   @include fonts(700, 20px, 20px);
-  margin-block-start: 0;
-  margin-block-end: 20px;
+  margin-top: 0;
+  margin-bottom: 20px;
 }
 
 .feedback__text p {
   @include fonts(400, 16px, 140%);
-  margin-block-start: 0;
-  margin-block-end: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .feedback__content img {
   position: relative;
   align-self: flex-start;
-  top: 5px;
+  top: 0;
   height: 80px;
   width: 80px;
 }
@@ -79,6 +79,9 @@
   cursor: pointer;
   background-color: transparent;
   border: 0;
+  outline: none;
+  box-shadow: none;
+  outline-offset: 0;
 
   &:hover {
     fill: red;
@@ -98,6 +101,9 @@
   cursor: pointer;
   background-color: transparent;
   border: 0;
+  outline: none;
+  box-shadow: none;
+  outline-offset: 0;
 }
 
 @media (max-width: $tablet) {
@@ -112,7 +118,7 @@
 
   .feedback__continer h2 {
     @include header(700, 42px, 42px);
-    margin-block-end: 46px;
+    margin-bottom: 46px;
   }
 
   .feedback__content {
@@ -155,7 +161,7 @@
 
   .feedback__continer h2 {
     @include header(700, 32px, 32px);
-    margin-block-end: 48px;
+    margin-bottom: 48px;
   }
 
   .feedback__wrapper {
@@ -164,9 +170,14 @@
 
   .feedback__content {
     width: 226px;
+    height: inherit;
     min-height: 335px;
     padding: 30px 25px;
     position: relative;
+  }
+
+  .feedback__text {
+    padding-left: 0;
   }
 
   .feedback__content img {
@@ -183,7 +194,7 @@
     position: relative;
     left: 100px;
     top: 5px;
-    margin-block-end: 30px;
+    margin-bottom: 30px;
   }
 
   .feedback__text p {

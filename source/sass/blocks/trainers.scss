@@ -13,8 +13,8 @@
   @include header(700, 49px, 49px);
   max-width: 1160px;
   letter-spacing: 0.03em;
-  margin-block-end: 55px;
-  margin-block-start: 0;
+  margin-bottom: 55px;
+  margin-top: 0;
   padding-left: 5px;
   margin-left: auto;
   margin-right: auto;
@@ -26,7 +26,7 @@
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   cursor: pointer;
   position: relative;
 }
@@ -40,6 +40,9 @@
   cursor: pointer;
   background-color: transparent;
   border: 0;
+  outline: none;
+  box-shadow: none;
+  outline-offset: 0;
 }
 
 .trainers__click_right {
@@ -50,6 +53,9 @@
   cursor: pointer;
   background-color: transparent;
   border: 0;
+  outline: none;
+  box-shadow: none;
+  outline-offset: 0;
 }
 
 .trainers__click_left:hover path,
@@ -154,7 +160,7 @@
   .trainers h2 {
     @include header(700, 42px, 42px);
     letter-spacing: 0.03em;
-    margin-block-end: 44px;
+    margin-bottom: 44px;
     text-align: center;
   }
 

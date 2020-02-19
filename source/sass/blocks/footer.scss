@@ -28,8 +28,8 @@
 .footer__free-wrapper h2 {
   @include header(700, 49px, 49px);
   letter-spacing: 0.03em;
-  margin-block-start: 0;
-  margin-block-end: 45px;
+  margin-top: 0;
+  margin-bottom: 45px;
 }
 
 .footer__form {
@@ -56,6 +56,12 @@
   border-bottom: 1px solid #74819c;
   padding: 5px 0;
   box-sizing: border-box;
+  border-radius: 0;
+  box-shadow: none;
+
+  &:required {
+    box-shadow: none;
+  }
 }
 
 .form__inputs input::placeholder {
@@ -71,12 +77,25 @@
   box-sizing: border-box;
   border: 3px solid $white;
   color: $white;
+  box-shadow: none;
 
   &:hover {
     color: $white;
     background: linear-gradient(111.72deg, #ed0233 17.6%, #003eb7 95.31%);
-    outline: 0;
     border: 3px solid $black-blue;
+    outline: none;
+    box-shadow: none;
+    outline-offset: 0;
+  }
+
+  &:focus {
+    color: $white;
+    background: linear-gradient(111.72deg, #ed0233 17.6%, #003eb7 95.31%);
+    border: 3px solid $black-blue;
+    opacity: 0.9;
+    outline: none;
+    box-shadow: none;
+    outline-offset: 0;
   }
 }
 
@@ -98,8 +117,8 @@
 .footer__contacts-wrapper h2 {
   @include header(700, 49px, 49px);
   letter-spacing: 0.03em;
-  margin-block-start: 0;
-  margin-block-end: 50px;
+  margin-top: 0;
+  margin-bottom: 50px;
 }
 
 .footer__contacts-content {
@@ -132,23 +151,23 @@
 .footer__contact h3 {
   @include fonts(700, 16px, 16px);
   display: block;
-  margin-block-start: 0;
-  margin-block-end: 10px;
+  margin-top: 0;
+  margin-bottom: 10px;
 }
 
 .footer__contact p {
   @include fonts(400, 14px, 16px);
   display: block;
-  margin-block-start: 0;
-  margin-block-end: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .footer__contact a {
   @include fonts(400, 14px, 16px);
   @include link($black-blue);
   display: block;
-  margin-block-start: 0;
-  margin-block-end: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 
   &:hover {
     color: $orange;
@@ -258,7 +277,7 @@
 
   .footer__free-wrapper h2 {
     @include header(700, 42px, 42px);
-    margin-block-end: 40px;
+    margin-bottom: 40px;
     width: 560px;
   }
 
@@ -284,7 +303,7 @@
 
   .footer__contacts-wrapper h2 {
     @include header(700, 42px, 42px);
-    margin-block-end: 40px;
+    margin-bottom: 40px;
   }
 
   .footer__contacts-content {

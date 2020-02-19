@@ -12,8 +12,8 @@
   @include header(700, 49px, 49px);
   letter-spacing: 0.03em;
   text-align: center;
-  margin-block-start: 0;
-  margin-block-end: 58px;
+  margin-top: 0;
+  margin-bottom: 58px;
 }
 
 .stock__content {
@@ -51,8 +51,8 @@
 .stock__text p {
   @include fonts(400, 18px, 140%);
   color: $white;
-  margin-block-start: 0;
-  margin-block-end: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .stock__main-button {
@@ -70,7 +70,7 @@
 }
 
 .stock__main picture {
-  height: 462px;
+  min-height: 462px;
 }
 
 .stock__main img {
@@ -88,27 +88,32 @@
 .stock__other-item {
   min-height: 211px;
   padding: 23px 30px 29px;
-  border: 7px solid transparent;
+  border: 7px solid $white;
   border-image: linear-gradient(170deg, #d10a42, #00359f);
   border-image-slice: 1;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin-bottom: 40px;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
 }
 
 .stock__other-text h3 {
   @include fonts(700, 26px, 26px);
-  margin-block-start: 0;
-  margin-block-end: 10px;
+  margin-top: 0;
+  margin-bottom: 10px;
   color: $dark-blue;
 }
 
 .stock__other-text p {
   @include fonts(400, 16px, 140%);
   color: $dark-blue;
-  margin-block-start: 0;
-  margin-block-end: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .stock__other-button {
@@ -134,8 +139,8 @@
 
   .stock__container h2 {
     @include header(700, 42px, 42px);
-    margin-block-start: 0;
-    margin-block-end: 45px;
+    margin-top: 0;
+    margin-bottom: 45px;
   }
 
   .stock__content {
@@ -156,7 +161,7 @@
 
   .stock__main picture {
     flex-grow: 1;
-    height: 462px;
+    min-height: 462px;
   }
 
   .stock__main img {
@@ -171,6 +176,7 @@
 
   .stock__other-item {
     width: 48%;
+    margin-bottom: 0;
 
     &:first-of-type {
       padding-right: 55px;
@@ -178,7 +184,7 @@
   }
 
   .stock__other-text h3 {
-    margin-block-end: 12px;
+    margin-bottom: 12px;
   }
 }
 
@@ -192,8 +198,8 @@
 
   .stock__container h2 {
     @include header(700, 32px, 32px);
-    margin-block-start: 0;
-    margin-block-end: 47px;
+    margin-top: 0;
+    margin-bottom: 47px;
   }
 
   .stock__main {
@@ -223,7 +229,8 @@
   }
 
   .stock__main picture {
-    flex-grow: 1;
+    flex-grow: 0;
+    min-height: inherit;
     height: 299px;
   }
 
@@ -252,8 +259,8 @@
   }
 
   .stock__other-text h3 {
-    margin-block-start: 0;
-    margin-block-end: 10px;
+    margin-top: 0;
+    margin-bottom: 10px;
   }
 
   .stock__other-button {
