@@ -206,6 +206,7 @@ window.addEventListener('DOMContentLoaded', function () {
 function switchTabs() {
   function hideTabContent(a) {
     for (var i = a; i < tabContent.length; i++) {
+      tabs[i].style.backgroundColor = 'transparent';
       tabContent[i].classList.add('hide');
       tabContent[i].classList.remove('show');
       tabs[i].classList.remove('price__period-item_active');
@@ -219,14 +220,17 @@ function switchTabs() {
       tabContent[b].classList.remove('hide');
       tabContent[b].classList.add('show');
       target.classList.add('price__period-item_active');
+      target.style.backgroundColor = 'transparent';
     }
   }
 
-  tabControls.addEventListener('mouseup', function (evt) {
+tabs.forEach(function (item) {
+  item.addEventListener('click', function (evt) {
     var target = evt.target;
     if (target && target.classList.contains('price__period-item')) {
       for (var i = 0; i < tabs.length; i++) {
         if (target === tabs[i]) {
+          tabs[i].style.backgroundColor = 'transparent';
           hideTabContent(0);
           showTabContent(i, target);
           break;
@@ -234,6 +238,7 @@ function switchTabs() {
       }
     }
   });
+});
 }
 
 if (pricePage) {
