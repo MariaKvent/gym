@@ -222,7 +222,7 @@ function switchTabs() {
     }
   }
 
-  tabControls.addEventListener('click', function (evt) {
+  tabControls.addEventListener('mouseup', function (evt) {
     var target = evt.target;
     if (target && target.classList.contains('price__period-item')) {
       for (var i = 0; i < tabs.length; i++) {

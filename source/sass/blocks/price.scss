@@ -53,6 +53,15 @@
     border-bottom: 2px solid #d10a42;
     padding-bottom: 10px;
   }
+
+  &:focus {
+    color: $black-blue;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #d10a42;
+    padding-bottom: 10px;
+    background-color: transparent;
+  }
 }
 
 .price__period-item_active {
@@ -64,7 +73,6 @@
 .price__items {
   width: 100%;
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
 }
 
@@ -90,6 +98,7 @@
   border: 8px solid transparent;
   flex-wrap: wrap;
   margin-top: 10px;
+  margin-right: 40px;
 
   &:hover {
     padding-top: 53px;
@@ -97,6 +106,17 @@
     border-image: linear-gradient(111.72deg, #ed0233 17.6%, #003eb7 95.31%);
     border-image-slice: 1;
   }
+
+  &:focus {
+    padding-top: 53px;
+    border: 8px solid transparent;
+    border-image: linear-gradient(111.72deg, #ed0233 17.6%, #003eb7 95.31%);
+    border-image-slice: 1;
+  }
+}
+
+.price__item:nth-of-type(3n) {
+  margin-right: 0;
 }
 
 .price__item:last-of-type {
@@ -241,6 +261,10 @@
     &:last-of-type {
       margin-bottom: 0;
     }
+  }
+
+  .price__item:nth-of-type(3n) {
+    margin-right: auto;
   }
 }
 
